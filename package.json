@@ -1,0 +1,17 @@
+{
+  "name": "node-coz",
+  "version": "0.0.0",
+  "private": false,
+  "gypfile": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean && rm -f profile.coz",
+    "test": "yarn clean && yarn build && node smoke-test.js"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "~1.7.1"
+  }
+}
